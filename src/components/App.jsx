@@ -108,27 +108,3 @@ export class App extends Component {
     );
   }
 }
-
-// handleSearch = async searchRequest => {
-//   try {
-//     this.setState({ loading: true });
-//     const index = searchRequest.indexOf('/');
-//     const response = await axios.get(
-//       `https://pixabay.com/api/?q=${searchRequest.slice(index + 1)}&page=${
-//         this.state.page
-//       }&key=${apiKey}&image_type=photo&orientation=horizontal&per_page=12`
-//     );
-//     this.setState({ loading: false });
-//     const allDatas = response.data.hits;
-//     console.log(allDatas);
-//     const imgUrls = allDatas.map(image => ({
-//       id: image.id,
-//       webformatURL: image.webformatURL,
-//       largeImageURL: image.largeImageURL,
-//       tags: image.tags,
-//     }));
-//     this.setState({ images: imgUrls, searchRequest, page: 2 });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
