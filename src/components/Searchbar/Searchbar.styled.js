@@ -14,8 +14,10 @@ export const StyledForm = styled.form`
 export const StyledButton = styled.button`
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 10px;
+  padding: 16px;
   border: none;
+  font-size: 18px;
+  font-weight: 500;
 `;
 
 export const StyledInput = styled.input`
@@ -23,6 +25,11 @@ export const StyledInput = styled.input`
   border-bottom-left-radius: 10px;
   padding: 10px;
   border: none;
+  line-height: 2;
+  &:focus {
+    outline: none;
+    border: none;
+  }
 `;
 
 export const StyledSearch = styled.div`

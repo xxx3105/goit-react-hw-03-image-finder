@@ -60,7 +60,7 @@ export class ImageGalleryItem extends Component {
           contentLabel={tags}
           onKeyDown={this.closerOfModal}
         >
-          <img src={largeImageURL} alt={tags} onClick={this.closeModal} />
+          <img src={largeImageURL} alt={tags} />
         </Modal>
       </li>
     );
