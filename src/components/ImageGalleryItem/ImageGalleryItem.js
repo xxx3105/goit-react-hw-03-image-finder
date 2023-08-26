@@ -1,24 +1,6 @@
 import React, { Component } from 'react';
 import { GalleryItem } from './ImageGalleryItem.styled';
-import Modal from 'react-modal';
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    transition: 'transform 0.3s ease-in-out',
-  },
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    transition: 'opacity 0.3s ease-in-out',
-  },
-};
-
-Modal.setAppElement('#root');
+import { ModalStyled } from '../ModalStyled/ModalStyled';
 
 export class ImageGalleryItem extends Component {
   state = {
@@ -52,16 +34,14 @@ export class ImageGalleryItem extends Component {
           alt={tags}
           onClick={this.openModal}
         />
-
-        <Modal
+        <ModalStyled
           isOpen={this.state.isModalOpen}
           onRequestClose={this.closeModal}
-          style={customStyles}
           contentLabel={tags}
           onKeyDown={this.closerOfModal}
-        >
-          <img src={largeImageURL} alt={tags} />
-        </Modal>
+          src={largeImageURL}
+          alt={tags}
+        />
       </li>
     );
   }
